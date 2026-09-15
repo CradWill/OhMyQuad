@@ -60,6 +60,19 @@ Then open `http://localhost:5000` (or your configured port) in a browser to view
 
 ---
 
+## Branch Strategy
+ 
+To keep our git history simple and easy to follow, we use the following workflow:
+ 
+- **`main`** — our stable branch. All released/working code lives here.
+- **Feature branches** — all new work happens off `main`, split by area:
+  - `feature/frontend-...` for UI/frontend work
+  - `feature/backend-...` for backend work (e.g. YouTube API integration)
+- **Before merging** — feature branches are squashed and rebased onto the latest `main` to avoid unnecessary merge commits and keep commit history clean.
+- **Merging** — once a feature branch is complete and reviewed, it's merged back into `main`.
+
+---
+
 ## Contributing
 
 Contributions are welcome. User stories are tracked as GitHub Issues in the format:
